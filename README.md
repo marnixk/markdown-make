@@ -1,4 +1,4 @@
-h1. Markdown Makefile
+# Markdown Makefile
 
 A simple Makefile to build Markdown based books with pandoc. The Makefile figures out the order in which you want to concatenate all the markdown files by sorting them. It allows you to easily order and re-order your documents.  
 
@@ -15,7 +15,7 @@ The `header.tex` file that is included at the start introduces a number of figur
 * \refimg{caption}{file}{label}: Render an image and set a reference label to it so you can use \ref to reference its number.
 * \refwideimg{caption}{file}{label}: Same as above, but makes it so that the image can fall 2 centimeters outside the column margins, ideal for horizontally endowed images
 
-h2. Suggested directory structure
+## Suggested directory structure
 
 	/document-folder
 		document.main.md (will be rendered first)
@@ -32,8 +32,7 @@ h2. Suggested directory structure
 			01_in_closing.md
 			02_references.md
 
-
-h2. Requirements
+## Requirements
 
 Make sure you have the following apps installed on your Linux box:
 
