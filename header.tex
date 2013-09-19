@@ -1,0 +1,69 @@
+% meta information
+\author{Your name here}
+
+% use certain packages
+\usepackage{pslatex}
+\usepackage{graphicx}
+
+\setcounter{tocdepth}{2}
+
+%
+% For large figures, you can set temporary new indents
+%
+\newenvironment{narrow}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]
+}{\end{list}}
+
+% image command
+% \img{caption}{file}
+
+\newcommand{\img}[2]{
+	\begin{figure}[!htb]
+		\begin{center}
+			\scalebox{0.5}{
+				\includegraphics{#2}
+			}
+		\end{center}
+		\caption{#1}
+	\end{figure}
+}
+
+% image command with explicit label set
+% \refimg{caption}{file}{label}
+
+
+\newcommand{\refimg}[3]{
+	\begin{figure}[!htb]
+		\begin{center}
+			\scalebox{0.45}{
+				\includegraphics{#2}
+			}
+		\end{center}
+		\caption{#1}
+		\label{#3}
+	\end{figure}
+}
+
+
+\newcommand{\refwideimg}[3]{
+	\begin{figure}[!htb]
+		\begin{narrow}{-2cm}{-2cm}
+			\centering
+			\includegraphics[width=1.4\textwidth]{#2}
+			\caption{#1}
+			\label{#3}
+		\end{narrow}
+	\end{figure}
+}
+
+\renewcommand{\figurename}{Figure} 
+\renewcommand{\contentsname}{Table of contents}
+
