@@ -32,6 +32,13 @@ The `header.tex` file that is included at the start introduces a number of figur
 			01_in_closing.md
 			02_references.md
 
+## To Use
+
+Clone the repository and make some changes to the files, namely:
+
+* In `Makefile` change the path to point at the correct `header.tex` location
+* In `build-markdown` also change the path to point at your git repository
+
 ## Requirements
 
 Make sure you have the following apps installed on your Linux box:

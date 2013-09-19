@@ -3,4 +3,4 @@ FIRST=$(shell find . | grep \.main\.)
 OUTPUT=$(shell echo ${FIRST} | sed s/\.main\.md/.pdf/)
 
 build-document: ${FILES}
-	pandoc --include-in-header=/home/marnix/.markdown-make/header.tex ${FILES} -o ${OUTPUT}
+	pandoc --include-in-header=/this-repo-folder/header.tex ${FILES} -o ${OUTPUT}
